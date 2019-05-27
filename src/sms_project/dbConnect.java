@@ -21,7 +21,7 @@ public class dbConnect {
    
   public void Connect(){
       try{
-            String dbname="sms_project";
+            String dbname="cu";
             String pass="";
             String username="root";
             String Url="jdbc:mysql://localhost:3306/";
@@ -29,19 +29,18 @@ public class dbConnect {
             
             Class.forName(Drivers);
             conn=DriverManager.getConnection(Url+dbname,username,pass);
-//             pst=conn.prepareStatement(sql);
-//            pst.execute();
-            JOptionPane.showMessageDialog(null,"Connected");
+
+           // JOptionPane.showMessageDialog(null,"Connected");
       
       }catch(Exception ex){
           JOptionPane.showMessageDialog(null, ex);
       }
   
   }
-    public static void main(String[] args) {
-        dbConnect db= new dbConnect();
-        db.Connect();
-        
-    }
+//    public static void main(String[] args) {
+//        dbConnect db= new dbConnect();
+//        db.Connect();
+//        
+//    }
     
 }
